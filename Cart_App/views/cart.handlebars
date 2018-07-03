@@ -1,0 +1,40 @@
+<html>
+<head>
+<style>
+table, td, th {    
+    border: 1px solid #ddd;
+    text-align: left;
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+th, td {
+    padding: 15px;
+}
+</style>
+</head>
+<table style="width:50%">
+  <tr>
+    <th>Product Name</th>
+    <th>Mrp</th>
+    <th>Quantity</th>
+    <th>Price</th> 
+  </tr>
+{{#each items}}
+  <tr>
+    <td>{{item.name}}</td>
+     <td>{{item.MRP}}</td>
+    <td><a href="/product/add-to-cart/{{item.name}}" class="btn">+</a>  {{qty}}  <a href="/product/remove-from-cart/{{item.name}}" class="btn">-</a> </td> 
+     <td>{{price}}</td>
+
+</tr>
+{{/each}} 
+  <th>Total</th>
+  <th style="border:0px;"></th>
+  <th style="border:0px;"></th>
+  <th>{{totalPrice}}</th>
+</table>
+</html>

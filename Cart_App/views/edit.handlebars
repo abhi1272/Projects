@@ -1,0 +1,19 @@
+<form method="post" action="/product/update/{{product._id}}">
+  <div class="form-group">
+    <label >Name</label>
+    <input  type="text" name="name" class="form-control" placeholder="Name" value={{product.name}}>
+  </div>
+   <div class="form-group">
+    <label>BatchNo</label>
+    <input type="text" name="batchNo" class="form-control" placeholder="batchNo" value={{product.batchNo}}>
+  </div>
+  <div class="form-group">
+    <label>MRP</label>
+    <input type="text" name="MRP" class="form-control" placeholder="MRP" value={{product.MRP}}>
+  </div>
+  <div class="form-group">
+    <label>Quantity</label>
+    <input type="text" name="quantity" class="form-control" placeholder="quantity" value={{product.quantity}}>
+  </div>
+  <button type="submit" class="btn btn-primary">Submit</button>
+</form>

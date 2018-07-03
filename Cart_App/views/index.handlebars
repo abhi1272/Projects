@@ -1,0 +1,13 @@
+{{#if user}}
+<h2 class="page-header">{{{user.username}}} Dashboard</h2>
+{{else}}
+<h2 class="page-header">Dashboard</h2>
+{{/if}}
+<p>Welcome to your Dashboard:user</p>
+{{#each product}}
+<ul>
+	<li><a href="/product/detail/{{{name}}}">{{{name}}}</a></li>
+</ul>	
+{{/each}}
+<a href="/product/add">Add Product</a>
+
